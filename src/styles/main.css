@@ -1254,43 +1254,60 @@ img {
         z-index: 100;
     }
 
+    /* IMPORTANT: Keep slides at 100vw for proper scroll calculation */
     .project-slide {
-        padding: var(--space-md);
-        padding-top: calc(var(--space-md) + 80px);
+        flex: 0 0 100vw;
+        width: 100vw;
+        min-width: 100vw;
+        padding: var(--space-sm);
+        padding-top: calc(var(--space-md) + 70px);
         /* Extra space for header */
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
         overflow-y: auto;
     }
 
     /* Make project image smaller on mobile */
     .project-image-wrapper {
-        height: 25vh;
-        min-height: 150px;
-        max-height: 200px;
+        height: 22vh;
+        min-height: 120px;
+        max-height: 160px;
+        flex-shrink: 0;
     }
 
-    .project-number {
-        font-size: 3rem;
-        margin-bottom: var(--space-xs);
-    }
-
-    .project-title {
-        font-size: 1.5rem;
-    }
-
-    .project-description {
-        font-size: 0.85rem;
-        line-height: 1.5;
-        margin-bottom: var(--space-sm);
-    }
-
-    .project-tech {
-        margin-bottom: var(--space-sm);
+    .project-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
         gap: var(--space-xs);
     }
 
+    .project-number {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+        margin-bottom: var(--space-xs);
+    }
+
+    .project-description {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-bottom: var(--space-xs);
+    }
+
+    .project-tech {
+        margin-bottom: var(--space-xs);
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
     .project-tech span {
-        font-size: 0.65rem;
-        padding: 4px 8px;
+        font-size: 0.6rem;
+        padding: 3px 6px;
     }
 
     /* Show project links on mobile */
@@ -1298,8 +1315,8 @@ img {
         display: flex;
         flex-direction: row;
         gap: var(--space-sm);
-        margin-top: var(--space-sm);
-        margin-bottom: var(--space-sm);
+        margin-top: auto;
+        margin-bottom: var(--space-xs);
     }
 
     .project-link {
@@ -1314,25 +1331,28 @@ img {
         grid-template-columns: 1fr;
     }
 
-    /* Fix skills stats to be compact horizontal on mobile */
+    /* Fix skills stats - use CSS Grid for proper responsive layout */
     .skills-stats {
-        flex-direction: row;
-        justify-content: space-around;
-        gap: var(--space-sm);
-        padding: var(--space-sm) var(--space-xs);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-xs);
+        padding: var(--space-sm);
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .stat-item {
         padding: var(--space-xs);
-        flex: 1;
+        text-align: center;
     }
 
     .stat-number {
-        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
     }
 
     .stat-label {
-        font-size: 0.55rem;
+        font-size: clamp(0.45rem, 2vw, 0.6rem);
+        letter-spacing: 0.05em;
     }
 
     /* Fix contact section centering */
