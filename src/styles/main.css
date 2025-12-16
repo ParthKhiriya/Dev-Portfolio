@@ -1253,116 +1253,114 @@ img {
         z-index: 100;
     }
 
-    /* Mobile Project Cards - each project in a rounded box */
+    /* Mobile Project Slides */
     .project-slide {
         flex: 0 0 100vw;
         width: 100vw;
         min-width: 100vw;
         padding: var(--space-sm);
-        padding-top: calc(var(--space-md) + 60px);
+        padding-top: calc(var(--space-md) + 90px);
+        /* Space for header + progress */
+        padding-bottom: var(--space-md);
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        position: relative;
     }
 
-    /* Create a card container for the entire project */
-    .project-slide>* {
-        display: contents;
-    }
-
-    .project-image-wrapper,
-    .project-info {
-        display: block;
-    }
-
+    /* Rounded box ONLY around project content (not header/progress) */
     .project-slide::before {
         content: '';
         position: absolute;
-        top: calc(var(--space-md) + 55px);
+        top: calc(var(--space-md) + 85px);
+        /* Start below header */
         left: var(--space-sm);
         right: var(--space-sm);
         bottom: var(--space-sm);
         background: var(--color-surface);
-        border-radius: 16px;
+        border-radius: 20px;
         border: 1px solid rgba(232, 213, 183, 0.15);
-        z-index: -1;
+        z-index: 0;
     }
 
-    /* Project card layout */
-    .project-slide {
-        flex-direction: column;
-        gap: 0;
-        position: relative;
-    }
-
-    /* Smaller image on top */
+    /* Image wrapper - bigger to fill space */
     .project-image-wrapper {
+        position: relative;
+        z-index: 1;
         width: calc(100% - 2rem);
-        height: 120px;
-        min-height: 100px;
-        max-height: 140px;
+        height: 35vh;
+        min-height: 180px;
+        max-height: 250px;
         margin: var(--space-sm);
-        margin-top: var(--space-md);
-        border-radius: 12px;
+        border-radius: 16px;
         overflow: hidden;
     }
 
     .project-image {
-        border-radius: 12px;
+        border-radius: 16px;
     }
 
-    /* Text content below image */
+    /* Project info - fills remaining space */
     .project-info {
-        padding: 0 var(--space-md);
+        position: relative;
+        z-index: 1;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--space-sm) var(--space-md);
         padding-bottom: var(--space-md);
         text-align: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .project-number {
-        font-size: 2rem;
-        margin-bottom: var(--space-xs);
+        display: none;
+        /* Hide number on mobile for cleaner look */
     }
 
     .project-title {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin-bottom: var(--space-xs);
     }
 
     .project-description {
-        font-size: 0.75rem;
-        line-height: 1.4;
-        margin-bottom: var(--space-sm);
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: var(--space-md);
         color: var(--color-text-muted);
     }
 
-    /* Tech tags below description */
+    /* Tech tags */
     .project-tech {
         justify-content: center;
-        margin-bottom: var(--space-sm);
-        gap: 4px;
+        margin-bottom: var(--space-md);
+        gap: 6px;
         flex-wrap: wrap;
     }
 
     .project-tech span {
-        font-size: 0.55rem;
-        padding: 4px 8px;
+        font-size: 0.6rem;
+        padding: 5px 10px;
     }
 
-    /* Buttons at the bottom */
+    /* Buttons at bottom */
     .project-links {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: var(--space-sm);
-        margin-top: var(--space-xs);
+        gap: var(--space-md);
+        margin-top: auto;
     }
 
     .project-link {
-        font-size: 0.65rem;
-        padding: 8px 16px;
+        font-size: 0.7rem;
+        padding: 10px 20px;
         background: var(--color-accent);
         color: var(--color-bg);
-        border-radius: 20px;
+        border-radius: 25px;
         text-align: center;
         font-weight: 500;
     }
@@ -1375,34 +1373,9 @@ img {
         grid-template-columns: 1fr;
     }
 
-    /* Skills stats - vertical but compact */
+    /* HIDE skills stats on mobile */
     .skills-stats {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-xs);
-        padding: var(--space-sm) var(--space-md);
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .stat-item {
-        display: flex;
-        align-items: center;
-        gap: var(--space-sm);
-        padding: var(--space-xs) var(--space-sm);
-        background: var(--color-surface);
-        border-radius: 8px;
-    }
-
-    .stat-number {
-        font-size: 1.2rem;
-        min-width: 40px;
-    }
-
-    .stat-label {
-        font-size: 0.6rem;
-        letter-spacing: 0.05em;
-        text-align: left;
+        display: none !important;
     }
 
     /* Fix contact section centering */
