@@ -11,7 +11,7 @@ const projectsData = [
         accent: '#7A6D5D',
         visual: 'audiocnn',
         liveUrl: null,
-        githubUrl: 'https://github.com/ParthKhiriya/AudioCNN'
+        githubUrl: 'https://github.com/ParthKhiriya/audio-cnn'
     },
     {
         id: '02',
@@ -21,7 +21,7 @@ const projectsData = [
         accent: '#695C4C',
         visual: 'lanenet',
         liveUrl: null,
-        githubUrl: 'https://github.com/ParthKhiriya/LaneNet-Implementation'
+        githubUrl: 'https://github.com/ParthKhiriya/CLR_LaneNet'
     },
     {
         id: '03',
