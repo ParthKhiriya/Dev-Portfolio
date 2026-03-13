@@ -5,6 +5,26 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const projectsData = [
     {
         id: '01',
+        title: 'AudioCNN',
+        description: 'Engineered a custom ResNet-based CNN in PyTorch, achieving 84.25% accuracy on ESC-50. Built mel-spectrogram pipeline and interactive FastAPI/Next.js frontend.',
+        tech: ['PyTorch', 'Next.js', 'FastAPI', 'Torchaudio'],
+        accent: '#7A6D5D',
+        visual: 'audiocnn',
+        liveUrl: null,
+        githubUrl: 'https://github.com/ParthKhiriya/AudioCNN'
+    },
+    {
+        id: '02',
+        title: 'LaneNet',
+        description: 'Developed CLRLaneNet by integrating a learned label-assignment network, achieving a +2.8% F1 improvement on CULane under real-world conditions like curvature.',
+        tech: ['Python', 'PyTorch', 'CLRNet', 'ResNet'],
+        accent: '#695C4C',
+        visual: 'lanenet',
+        liveUrl: null,
+        githubUrl: 'https://github.com/ParthKhiriya/LaneNet-Implementation'
+    },
+    {
+        id: '03',
         title: 'QuickChat',
         description: 'A full-stack MERN application for real-time chat with JWT authentication, Socket.io integration, and MongoDB persistence.',
         tech: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
@@ -14,7 +34,7 @@ const projectsData = [
         githubUrl: 'https://github.com/ParthKhiriya/QuickChat'
     },
     {
-        id: '02',
+        id: '04',
         title: 'ThinkBoard',
         description: 'A personal note manager MERN application with RESTful APIs, production-ready error handling, and reusable components.',
         tech: ['React', 'TypeScript', 'Express.js', 'MongoDB'],
@@ -24,7 +44,7 @@ const projectsData = [
         githubUrl: 'https://github.com/ParthKhiriya/ThinkBoard'
     },
     {
-        id: '03',
+        id: '05',
         title: 'Tweet Sentiment',
         description: 'NLP-powered sentiment analyzer for Twitter posts using TF-IDF, Logistic Regression, and SVM classifiers with real-time prediction.',
         tech: ['Python', 'NLP', 'Scikit-learn', 'Flask'],
@@ -34,7 +54,7 @@ const projectsData = [
         githubUrl: 'https://github.com/ParthKhiriya/Tweet-Sentiment-Analysis'
     },
     {
-        id: '04',
+        id: '06',
         title: 'GraphDB',
         description: 'Neo4j-inspired graph database with custom query engine, CRUD operations, and interactive Python frontend for JSON visualization.',
         tech: ['C++', 'Python', 'Graph Theory', 'DSA'],
@@ -91,6 +111,34 @@ const ProjectVisual = ({ type }) => {
                     <div className="graph-node node-3"></div>
                     <div className="graph-edge edge-1"></div>
                     <div className="graph-edge edge-2"></div>
+                </div>
+            </div>
+        )
+    }
+
+    if (type === 'audiocnn') {
+        return (
+            <div className="project-visual audiocnn-visual">
+                <div className="audio-waves">
+                    <div className="wave wave-1"></div>
+                    <div className="wave wave-2"></div>
+                    <div className="wave wave-3"></div>
+                    <div className="wave wave-4"></div>
+                    <div className="wave wave-5"></div>
+                </div>
+                <div className="spectrogram-overlay"></div>
+            </div>
+        )
+    }
+
+    if (type === 'lanenet') {
+        return (
+            <div className="project-visual lanenet-visual">
+                <div className="road">
+                    <div className="lane-marking left-lane"></div>
+                    <div className="lane-marking middle-lane"></div>
+                    <div className="lane-marking right-lane"></div>
+                    <div className="detection-box"></div>
                 </div>
             </div>
         )
@@ -184,7 +232,7 @@ const Projects = () => {
                     <div className="progress-bar">
                         <div className="progress-fill" ref={progressFillRef}></div>
                     </div>
-                    <div className="progress-total">04</div>
+                    <div className="progress-total">{projectsData.length.toString().padStart(2, '0')}</div>
                 </div>
             </div>
             <div className="projects-wrapper">
