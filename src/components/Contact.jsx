@@ -163,7 +163,7 @@ const Contact = () => {
                             </span>
                             <span className="social-name">College Email</span>
                         </a>
-                        <a href="https://drive.google.com/file/d/14hqg_18krjaajLjgJXt_UHvKEseR-dH4/view?usp=sharing" className="contact-social-link" target="_blank" rel="noopener noreferrer" data-cursor="RESUME">
+                        <a href="https://drive.google.com/file/d/1tWiBOA21498n4x8JrDz36oU84qRSy-NB/view?usp=sharing" className="contact-social-link" target="_blank" rel="noopener noreferrer" data-cursor="RESUME">
                             <span className="social-icon">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
                                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6z" />
