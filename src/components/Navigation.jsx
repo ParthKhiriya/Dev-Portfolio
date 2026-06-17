@@ -6,7 +6,7 @@ const Navigation = () => {
     const [activeSection, setActiveSection] = useState('hero')
 
     useEffect(() => {
-        const sections = ['hero', 'projects', 'skills', 'about', 'contact']
+        const sections = ['hero', 'projects', 'skills', 'experience', 'about', 'contact']
 
         sections.forEach(sectionId => {
             ScrollTrigger.create({
@@ -39,6 +39,7 @@ const Navigation = () => {
         { id: 'hero', label: 'Home' },
         { id: 'projects', label: 'Works' },
         { id: 'skills', label: 'Skills' },
+        { id: 'experience', label: 'Experience' },
         { id: 'about', label: 'About' },
         { id: 'contact', label: 'Contact' }
     ]

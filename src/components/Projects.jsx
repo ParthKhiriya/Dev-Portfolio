@@ -5,6 +5,26 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const projectsData = [
     {
         id: '01',
+        title: 'NeuroClaw',
+        description: 'Autonomous AI coding assistant and repository agent featuring a TUI and Telegram bot interface.',
+        tech: ['Bun', 'TypeScript', 'Vercel AI SDK', 'OpenRouter', 'OpenClaw', 'Telegraf'],
+        accent: '#20C997',
+        visual: 'neuroclaw',
+        liveUrl: null,
+        githubUrl: 'https://github.com/ParthKhiriya/neuro-claw'
+    },
+    {
+        id: '02',
+        title: 'Resume AI',
+        description: 'Full-stack AI-powered mock interview platform providing tailored questions and detailed performance reports.',
+        tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Google Gemini AI', 'Zod', 'Puppeteer'],
+        accent: '#5E72E4',
+        visual: 'resumeai',
+        liveUrl: null,
+        githubUrl: 'https://github.com/ParthKhiriya/resume-ai'
+    },
+    {
+        id: '03',
         title: 'AudioCNN',
         description: 'Engineered a custom ResNet-based CNN in PyTorch, achieving 84.25% accuracy on ESC-50. Built mel-spectrogram pipeline and interactive FastAPI/Next.js frontend.',
         tech: ['PyTorch', 'Next.js', 'FastAPI', 'Torchaudio'],
@@ -14,7 +34,7 @@ const projectsData = [
         githubUrl: 'https://github.com/ParthKhiriya/audio-cnn'
     },
     {
-        id: '02',
+        id: '04',
         title: 'LaneNet',
         description: 'Developed CLRLaneNet by integrating a learned label-assignment network, achieving a +2.8% F1 improvement on CULane under real-world conditions like curvature.',
         tech: ['Python', 'PyTorch', 'CLRNet', 'ResNet'],
@@ -24,7 +44,7 @@ const projectsData = [
         githubUrl: 'https://github.com/ParthKhiriya/CLR_LaneNet'
     },
     {
-        id: '03',
+        id: '05',
         title: 'QuickChat',
         description: 'A full-stack MERN application for real-time chat with JWT authentication, Socket.io integration, and MongoDB persistence.',
         tech: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
@@ -34,17 +54,7 @@ const projectsData = [
         githubUrl: 'https://github.com/ParthKhiriya/QuickChat'
     },
     {
-        id: '04',
-        title: 'ThinkBoard',
-        description: 'A personal note manager MERN application with RESTful APIs, production-ready error handling, and reusable components.',
-        tech: ['React', 'TypeScript', 'Express.js', 'MongoDB'],
-        accent: '#C4B5A0',
-        visual: 'thinkboard',
-        liveUrl: 'https://thinkboard-bfop.onrender.com',
-        githubUrl: 'https://github.com/ParthKhiriya/ThinkBoard'
-    },
-    {
-        id: '05',
+        id: '06',
         title: 'Tweet Sentiment',
         description: 'NLP-powered sentiment analyzer for Twitter posts using TF-IDF, Logistic Regression, and SVM classifiers with real-time prediction.',
         tech: ['Python', 'NLP', 'Scikit-learn', 'Flask'],
@@ -54,7 +64,7 @@ const projectsData = [
         githubUrl: 'https://github.com/ParthKhiriya/Tweet-Sentiment-Analysis'
     },
     {
-        id: '06',
+        id: '07',
         title: 'GraphDB',
         description: 'Neo4j-inspired graph database with custom query engine, CRUD operations, and interactive Python frontend for JSON visualization.',
         tech: ['C++', 'Python', 'Graph Theory', 'DSA'],
@@ -62,6 +72,16 @@ const projectsData = [
         visual: 'graphdb',
         liveUrl: null,
         githubUrl: 'https://github.com/poojanpatelalpesh/dsa_Ne04j'
+    },
+    {
+        id: '08',
+        title: 'ThinkBoard',
+        description: 'A personal note manager MERN application with RESTful APIs, production-ready error handling, and reusable components.',
+        tech: ['React', 'TypeScript', 'Express.js', 'MongoDB'],
+        accent: '#C4B5A0',
+        visual: 'thinkboard',
+        liveUrl: 'https://thinkboard-bfop.onrender.com',
+        githubUrl: 'https://github.com/ParthKhiriya/ThinkBoard'
     }
 ]
 
@@ -139,6 +159,37 @@ const ProjectVisual = ({ type }) => {
                     <div className="lane-marking middle-lane"></div>
                     <div className="lane-marking right-lane"></div>
                     <div className="detection-box"></div>
+                </div>
+            </div>
+        )
+    }
+
+    if (type === 'resumeai') {
+        return (
+            <div className="project-visual resumeai-visual">
+                <div className="ai-chat-interface">
+                    <div className="ai-message">Hello, let's start the interview.</div>
+                    <div className="user-message">Sure, I'm ready.</div>
+                    <div className="ai-report-box">Generating Report...</div>
+                </div>
+            </div>
+        )
+    }
+
+    if (type === 'neuroclaw') {
+        return (
+            <div className="project-visual neuroclaw-visual">
+                <div className="terminal-window">
+                    <div className="terminal-header">
+                        <span className="dot close"></span>
+                        <span className="dot minimize"></span>
+                        <span className="dot maximize"></span>
+                    </div>
+                    <div className="terminal-body">
+                        <div className="terminal-line"><span>$</span> bun run index.ts</div>
+                        <div className="terminal-line highlight">NeuroClaw Agent Active</div>
+                        <div className="terminal-line">Analyzing codebase...</div>
+                    </div>
                 </div>
             </div>
         )

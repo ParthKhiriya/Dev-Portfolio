@@ -11,7 +11,9 @@ const skillsData = [
             { name: 'Python', icon: '🐍', color: '#3776AB' },
             { name: 'C/C++', icon: '⚡', color: '#00599C' },
             { name: 'JavaScript', icon: '✨', color: '#F7DF1E' },
-            { name: 'TypeScript', icon: '📘', color: '#3178C6' }
+            { name: 'TypeScript', icon: '📘', color: '#3178C6' },
+            { name: 'DSA', icon: '🧩', color: '#E8D5B7' },
+            { name: 'Graph Theory', icon: '🕸️', color: '#8B7E6F' }
         ]
     },
     {
@@ -20,7 +22,20 @@ const skillsData = [
             { name: 'PyTorch', icon: '🔥', color: '#EE4C2C' },
             { name: 'TensorFlow', icon: '🧠', color: '#FF6F00' },
             { name: 'scikit-learn', icon: '🤖', color: '#F7931E' },
-            { name: 'Keras', icon: '🧮', color: '#D00000' }
+            { name: 'Keras', icon: '🧮', color: '#D00000' },
+            { name: 'Torchaudio', icon: '🎧', color: '#EE4C2C' },
+            { name: 'ResNet', icon: '🧠', color: '#00599C' },
+            { name: 'CLRNet', icon: '🛣️', color: '#695C4C' },
+            { name: 'NLP', icon: '🗣️', color: '#A69B8D' }
+        ]
+    },
+    {
+        category: 'AI & Agents',
+        skills: [
+            { name: 'Vercel AI SDK', icon: '🔺', color: '#000000' },
+            { name: 'OpenRouter', icon: '🔀', color: '#4B5563' },
+            { name: 'Google Gemini AI', icon: '✨', color: '#4285F4' },
+            { name: 'OpenClaw', icon: '🦞', color: '#FF4500' }
         ]
     },
     {
@@ -40,6 +55,8 @@ const skillsData = [
             { name: 'Next.js', icon: '▲', color: '#ffffff' },
             { name: 'TailwindCSS', icon: '💨', color: '#06B6D4' },
             { name: 'GSAP', icon: '🎬', color: '#88CE02' },
+            { name: 'Vite', icon: '⚡', color: '#646CFF' },
+            { name: 'SCSS', icon: '💅', color: '#CC6699' },
             { name: 'Bootstrap/jQuery', icon: '🛠️', color: '#7952B3' }
         ]
     },
@@ -48,6 +65,13 @@ const skillsData = [
         skills: [
             { name: 'Node.js', icon: '🟢', color: '#339933' },
             { name: 'Express.js', icon: '🚀', color: '#ffffff' },
+            { name: 'Bun', icon: '🥟', color: '#FBF0DF' },
+            { name: 'FastAPI', icon: '⚡', color: '#009688' },
+            { name: 'Flask', icon: '🌶️', color: '#000000' },
+            { name: 'Socket.io', icon: '🔌', color: '#010101' },
+            { name: 'Telegraf', icon: '🤖', color: '#2CA5E0' },
+            { name: 'Puppeteer', icon: '🎭', color: '#40B5A4' },
+            { name: 'Zod', icon: '💎', color: '#3068B7' },
             { name: 'REST APIs', icon: '🔗', color: '#FF6B6B' },
             { name: 'Postman', icon: '📮', color: '#FF6C37' }
         ]
@@ -97,15 +121,15 @@ const Skills = () => {
 
                 <div className="skills-stats" style={{ display: 'flex' }}>
                     <div className="stat-item">
-                        <span className="stat-number">6+</span>
+                        <span className="stat-number">8+</span>
                         <span className="stat-label">Projects Built</span>
                     </div>
                     <div className="stat-item">
-                        <span className="stat-number">8.22</span>
+                        <span className="stat-number">8.28</span>
                         <span className="stat-label">CGPA @ IITJ</span>
                     </div>
                     <div className="stat-item">
-                        <span className="stat-number">20+</span>
+                        <span className="stat-number">30+</span>
                         <span className="stat-label">Technologies</span>
                     </div>
                 </div>

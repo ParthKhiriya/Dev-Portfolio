@@ -178,7 +178,7 @@ const Contact = () => {
             <div className="contact-footer">
                 <div className="footer-content">
                     <span className="footer-text">Designed & Built by Parth Khiriya</span>
-                    <span className="footer-year">© 2025</span>
+                    <span className="footer-year">© {new Date().getFullYear()}</span>
                 </div>
             </div>
         </section>
