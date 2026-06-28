@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const Navigation = () => {
     const [activeSection, setActiveSection] = useState('hero')
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     useEffect(() => {
         const sections = ['hero', 'projects', 'skills', 'experience', 'about', 'contact']
@@ -25,6 +26,7 @@ const Navigation = () => {
 
     const handleClick = (e, sectionId) => {
         e.preventDefault()
+        setIsMenuOpen(false)
         const target = document.getElementById(sectionId)
         if (target) {
             gsap.to(window, {
@@ -45,7 +47,10 @@ const Navigation = () => {
     ]
 
     return (
-        <nav className="navigation" id="navigation">
+        <nav className={`navigation ${isMenuOpen ? 'menu-open' : ''}`} id="navigation">
+            <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
+                <span className="hamburger"></span>
+            </button>
             <ul className="nav-list">
                 {navItems.map(item => (
                     <li key={item.id} className="nav-item">
